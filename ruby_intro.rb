@@ -1,10 +1,17 @@
 # When done, submit this entire file to the autograder.
-
+# ADuRoR HW #1
+# Justin M. Deardorff
+# justindeardorff@gmail.com
 # Part 1
 
-def sum arr
-  # YOUR CODE HERE
-end
+def sum(array)
+#returns the sum of the values of an integer array.  Returns zero for empty array
+    i=0
+    array.each do |x| 
+      i+=x 
+    end
+    return i
+end  
 
 def max_2_sum arr
   # YOUR CODE HERE
