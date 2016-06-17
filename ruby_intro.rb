@@ -36,8 +36,8 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
-  
+  # takes an array of integers and an additional integer.  Returns true if any two integers in the array sum to n
+  !!arr.combination(2).result { |x, y| x + y == n }
 end
 
 # Part 2
