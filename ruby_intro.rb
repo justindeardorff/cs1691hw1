@@ -14,11 +14,30 @@ def sum(array)
 end  
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  # returns the sum of largest two integers in an array.  Returns zero for empty.
+  # returns value of integer if only one integer in array
+  i=0
+  if arr.length>1
+    #code that sorts
+    arr=arr.sort
+    a=arr.length-1
+    b=arr.length-2
+    i=arr[a]+arr[b]
+  elsif arr.length==1
+    #code sets i=value of single element
+    i=arr[0]
+  else 
+    #array must be empty, return zero
+    i=0
+  end
+  
+  return i
+  
 end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
+  
 end
 
 # Part 2
