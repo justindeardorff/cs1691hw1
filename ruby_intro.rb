@@ -18,7 +18,7 @@ def max_2_sum arr
   # returns value of integer if only one integer in array
   i=0
   if arr.length>1
-    #code that sorts
+    #code that sorts the array and then takes the last two elements after sorting
     arr=arr.sort
     a=arr.length-1
     b=arr.length-2
