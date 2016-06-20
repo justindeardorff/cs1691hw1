@@ -6,11 +6,7 @@
 
 def sum(array)
 #returns the sum of the values of an integer array.  Returns zero for empty array
-    i=0
-    array.each do |x| 
-      i+=x 
-    end
-    return i
+    arr.inject(0,:+)
 end  
 
 def max_2_sum arr
@@ -29,7 +25,7 @@ def max_2_sum arr
   else 
     #array must be empty, return zero
     i=0
-  end
+  endnn
   
   return i
   
