@@ -5,8 +5,8 @@
 # Part 1
 
 def sum(array)
-#returns the sum of the values of an integer array.  Returns zero for empty array
-    arr.inject(0,:+)
+    #returns the sum of the values of an integer array.  Returns zero for empty array
+    array.inject(0){|memo, x| memo+x}
 end  
 
 def max_2_sum arr
@@ -25,7 +25,7 @@ def max_2_sum arr
   else 
     #array must be empty, return zero
     i=0
-  endnn
+  end
   
   return i
   
@@ -33,7 +33,7 @@ end
 
 def sum_to_n? arr, n
   # takes an array of integers and an additional integer.  Returns true if any two integers in the array sum to n
-  !!arr.combination(2).result { |x, y| x + y == n }
+  !arr.combination(2).result { |x, y| x + y == n }
 end
 
 # Part 2
