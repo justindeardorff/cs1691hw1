@@ -33,13 +33,13 @@ end
 
 def sum_to_n? arr, n
   # takes an array of integers and an additional integer.  Returns true if any two integers in the array sum to n
-  if arr.length<2
-    false
-  elsif !!result.arr.combination(2) { |x, y| x+y == n } == false
-    false
-  else 
-    true
+  answer=false
+  
+  if arr.combination(2).find { |x, y| x+y == n } != nil
+    answer=true
   end
+  
+  return answer
 end  
 
 # Part 2
