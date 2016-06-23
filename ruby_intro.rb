@@ -45,7 +45,9 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  # takes a string argument, concatenates and returns a Hello, [name] string
+  welcome = "Hello, #{name}"
+  return welcome
 end
 
 def starts_with_consonant? s
