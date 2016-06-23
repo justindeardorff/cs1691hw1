@@ -51,7 +51,12 @@ def hello(name)
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  # takes a string arguments and returns a boolean true if the string begins with a consonant
+  answer=false
+  if (s[0] =~ /[aeiouAEIOU]/)==false
+    answer=true
+  end
+  return answer
 end
 
 def binary_multiple_of_4? s
