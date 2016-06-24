@@ -52,15 +52,22 @@ end
 
 def starts_with_consonant? s
   # takes a string arguments and returns a boolean true if the string begins with a consonant
-  answer=false
-  if (s[0] =~ /[aeiouAEIOU]/)==false
-    answer=true
-  end
-  return answer
+  (s[0] =~ /[bcdfghjklmnpqrstvwxyz]/i) == 0
 end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  if (s =~ /[01]/) !=  0
+    return false
+  end  
+  s = s.scan /\w/
+  result = 0
+  multipliers = [32768, 16384, 8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1].reverse
+  s.each_with_index do |c, i|
+    puts multipliers[i] if c == '1'
+    result += multipliers[i] * c.to_i
+  end
+  return result
 end
 
 # Part 3
