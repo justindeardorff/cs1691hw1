@@ -56,7 +56,7 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  # accepts a string, returns true if the string is a binary value that is a multiple of four, else false
   if (s =~ /[01]/) !=  0
     return false
   end  
@@ -72,5 +72,34 @@ end
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+# A class that stores a book ISBN and price with 2 decimal precision
+  def initialize(isbn, price)
+    if (isbn == '' || price<=0) 
+      raise(ArgumentError) 
+    end
+    @isbn=isbn
+    @price=price
+  end 
+  def isbn
+    @isbn
+  end  
+  def price 
+    @price
+  end  
+  def price_as_string
+    # price formatted with dollar sign and 2 decimal places
+    return "$" + "%.2f" % @price
+  end  
+  def price=(new_price)
+    if new_price<=0 
+      raise(ArgumentError) 
+    end
+    @price=new_price
+  end
+  def isbn=(new_isbn)
+    if new_isbn=='' 
+      raise(ArgumentError) 
+    end
+      @isbn=new_isbn
+  end
 end
